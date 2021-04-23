@@ -10,7 +10,9 @@ pipeline {
     }
     stages {
         stage ('Get source') {
-            git 'https://github.com/jonbos/CaucusCalculator.git'
+            steps {
+                git 'https://github.com/jonbos/CaucusCalculator.git'
+            }
         }
         stage ('Build') {
             steps {
