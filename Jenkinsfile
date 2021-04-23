@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage ('Get source') {
             steps {
-                git 'https://github.com/jonbos/CaucusCalculator.git'
+                git 'https://github.com/BakirovaAsia/Homework11.git'
             }
         }
         stage ('Build') {
