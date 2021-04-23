@@ -4,7 +4,7 @@ pipeline {
             image '178.154.214.22:8123/repository/mydockerrepo/buildimage:latest'
             args '-v ./war/:/usr/local/CaucusCalculator/target/'
             args '-v /var/run/docker.sock:/var/run/docker.sock'
-            registryUrl 'http://178.154.214.22:8123'
+            registryUrl 'http://178.154.214.22:8123/repository/mydockerrepo'
             registryCredentialsId '7b949703-9e41-48d1-8a63-972b43b8f986'
         }
     }
