@@ -4,4 +4,6 @@ RUN apt-get update \
     && apt-get install docker.io -y \
     && rm -rf /var/lib/apt/lists/*
 
-VOLUME /tmp
+COPY ./daemon.json /etc/docker/
+
+RUN systemctl daemon-reload && systemctl restart docker.service
