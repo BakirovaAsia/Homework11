@@ -28,7 +28,7 @@ pipeline {
         }
         stage ('Deploy image') {
             steps {
-                sh 'docker run -d  178.154.214.22:8123/repository/mydockerrepo/caucuscalc:latest'
+                sh 'docker run -d  -p 8085:8080 178.154.214.22:8123/repository/mydockerrepo/caucuscalc:latest'
             }
         }
     }
