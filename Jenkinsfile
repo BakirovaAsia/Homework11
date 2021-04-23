@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'maven:3.8.1-adoptopenjdk-11'
+            image '178.154.214.22:8123/repository/mydockerrepo/buildimage:latest'
             args '-v ./war/:/usr/local/CaucusCalculator/target/'
             args '-v /var/run/docker.sock:/var/run/docker.sock'
         }
