@@ -22,7 +22,7 @@ pipeline {
         }
         stage ('Make docker image') {
             steps {
-                sh 'users'
+                sh 'whoami'
                 sh 'docker build -t caucuscalc .'
                 sh 'docker tag caucuscalc  178.154.214.22:8123/repository/mydockerrepo/caucuscalc:latest  && docker push  178.154.214.22:8123/repository/mydockerrepo/caucuscalc:latest'
             }
