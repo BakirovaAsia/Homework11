@@ -6,3 +6,4 @@ RUN apt-get update \
 
 COPY ./daemon.json /etc/docker/
 
+CMD service docker restart
